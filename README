@@ -1,1 +1,14 @@
-this is my small projects for cyber sec tools 
+You're looking for a way to keep your data safe from prying eyes? Look no further than this cybersecurity project that's got the goods on text encryption. We're talking top-notch algorithms like AES, DES, and RSA - the crème de la crème of secure data protection.
+
+This Python code is the real deal, leveraging the cryptography library to show off its symmetric and asymmetric encryption chops. Here's the lowdown:
+
+First, we're importing the necessary modules and classes. We've got Fernet from cryptography.fernet for AES symmetric encryption, and a whole host of other goodies from cryptography.hazmat.primitives for various cryptographic functions. And let's not forget generate_private_key and public_key from cryptography.hazmat.primitives.asymmetric.rsa for generating RSA key pairs.
+
+Now, onto the functions:
+
+    aes_encryption(message, key): This one takes a message and an AES key as input, creates a Fernet object, and encrypts the message. Boom! Encrypted message returned.
+    rsa_encryption(message, public_key): This one takes a message and an RSA public key as input, loads the public key, and encrypts the message with OAEP and SHA-256. Done! Encrypted message returned.
+
+Next up, we're generating keys like they're going out of style. AES key? Check. RSA key pair? You bet. We're assigning the private key to private_key and the public key to public_key. And just for kicks, we're serializing the public key as a PEM-encoded SubjectPublicKeyInfo object and saving it to pem.
+
+Time for a test drive. We've got a super-secret message - "A really secret message, maybe a pincode" - and we're encrypting it with both AES and RSA using our freshly generated keys. The encrypted messages? Completely different each time, because that's how encryption rolls.
